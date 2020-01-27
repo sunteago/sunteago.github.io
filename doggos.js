@@ -1,4 +1,3 @@
-let DOG_URL;
 const spinner = document.getElementById("spinner");
 const input = document.querySelector('.breed');
 input.addEventListener('click', function (event) {
@@ -24,6 +23,8 @@ function addNewDoggo(selected) {
       const img = document.createElement("img");// creates a new element (this is how you create elements programmatically)
       img.src = processedResponse.message; //sets the source to be processedResponse.message. "message" is the tag you get from the API
       img.alt = "Cute doggo"; // gives an alt text, you have to give images alt text...
+      img.height = "400";
+      img.style.margin = "10px";
       dogs.appendChild(img); // inside of dogs, it's going to add to the end a new child
       
     });

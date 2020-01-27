@@ -38,13 +38,14 @@ button:active{
 }
 
 .dogs{
-    display: flex;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
     margin: auto;
-    width:50%;
-    height: 7rem;
-    flex-direction: column;
     margin-top: 25px;
 }
+
 
 #spinner:not([hidden]) {
     position: fixed;
