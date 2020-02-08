@@ -1,0 +1,368 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap");
+@font-face {
+  font-family: "Microsoft Yi Baiti";
+  src: url(../fonts/msyi.ttf); }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif; }
+
+html, body {
+  width: 100%;
+  background-color: gray;
+  overflow-x: hidden; }
+
+.header .header-background {
+  background-image: url("../img/piano.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 10% 35%;
+  height: 100vh;
+  width: 100%;
+  filter: grayscale(70%); }
+
+.artist-profile {
+  position: absolute;
+  top: 40%;
+  left: 55%;
+  color: rgba(204, 204, 204, 0.863); }
+
+.artist-name {
+  color: inherit;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: 300;
+  text-shadow: 2px 2px 5px #272727; }
+
+.separating-line {
+  border: 1px solid rgba(240, 240, 240, 0.6);
+  width: 100%; }
+
+.artist-profession {
+  color: inherit;
+  font-size: 2rem;
+  font-weight: 300;
+  padding-top: 1rem; }
+
+.nav-bar {
+  background: rgba(0, 0, 0, 0.329);
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 50;
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2); }
+  .nav-bar .nav-bar__container {
+    width: 70%;
+    margin: 0 auto; }
+    .nav-bar .nav-bar__container .nav-bar__menu {
+      display: flex;
+      list-style: none;
+      justify-content: end; }
+      .nav-bar .nav-bar__container .nav-bar__menu .nav-bar__menu-item a {
+        text-align: center;
+        font-family: "Roboto", Arial, Helvetica, sans-serif;
+        font-size: 1.3rem;
+        color: #AEAEAE;
+        padding: 1rem;
+        display: inline-block;
+        text-decoration: none;
+        transition: color .5s ease-out, background .5s ease-out;
+        background: inherit; }
+        .nav-bar .nav-bar__container .nav-bar__menu .nav-bar__menu-item a:hover {
+          color: #f1f1f1;
+          background: rgba(241, 241, 241, 0.4); }
+
+.mobile-nav-bar {
+  display: none;
+  position: fixed;
+  top: 10%;
+  left: 10%; }
+  .mobile-nav-bar .toggle-button {
+    height: 40px;
+    width: 40px;
+    background: white; }
+  .mobile-nav-bar ul {
+    list-style: none; }
+    .mobile-nav-bar ul li a {
+      text-decoration: none; }
+
+.main {
+  width: 100%;
+  margin: 0 auto;
+  background: rgba(39, 39, 39, 0.05);
+  background: url("../img/tom-winckels-z8FFy3uMFGI-unsplash.jpg");
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1; }
+
+.section-container {
+  width: 70%;
+  height: 100%;
+  padding: 3rem 0;
+  margin: 0 auto 0 auto; }
+
+.page-center {
+  /* display: none; */
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  background: rgba(39, 39, 39, 0.05);
+  transform: translate(-50%, 0);
+  top: 0;
+  left: 50%;
+  z-index: -1; }
+
+.section-title {
+  font-size: 3rem;
+  margin-top: 2rem; }
+
+.separator-line {
+  margin-left: 4rem;
+  margin-top: 0.5rem;
+  border: 1px solid rgba(240, 240, 240, 0.6);
+  width: 60%; }
+
+.main-obras {
+  height: 100vh;
+  padding: 1rem;
+  background: linear-gradient(rgba(40, 64, 72, 0.25), rgba(40, 64, 72, 0.25)); }
+
+.main_obras__title {
+  color: rgba(204, 204, 204, 0.75);
+  margin-left: 4rem; }
+
+.main_obras__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .main_obras__container .main-obras__obra {
+    width: 50%;
+    padding: 1rem; }
+    .main_obras__container .main-obras__obra:nth-child(2) {
+      margin-top: 4rem; }
+    .main_obras__container .main-obras__obra:nth-child(3) {
+      width: 100%; }
+
+.main-obras__obra-title {
+  font-family: "Microsoft Yi Baiti", sans-serif;
+  font-size: 2rem;
+  color: #272727;
+  letter-spacing: 4px;
+  text-shadow: 0px 0px 4px #5E5050;
+  text-align: center; }
+
+.main-obras__obra-description {
+  text-align: center;
+  font-size: 1.25rem;
+  color: rgba(204, 204, 204, 0.75);
+  line-height: 2.5rem;
+  font-weight: 200;
+  padding: .5rem; }
+
+.main-proyectos {
+  height: 100vh;
+  background: linear-gradient(rgba(162, 154, 154, 0.15), rgba(162, 154, 154, 0.15));
+  padding: 1rem; }
+
+.main-proyectos__title {
+  text-align: right;
+  color: rgba(223, 223, 223, 0.609);
+  margin-right: 4rem; }
+
+.main-proyectos__title-full {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: end; }
+
+.main-proyectos__container {
+  display: flex;
+  flex-direction: column;
+  align-items: end; }
+
+.main-proyectos__container h2 {
+  text-align: left;
+  font-family: "Microsoft Yi Baiti", sans-serif;
+  margin: 2rem;
+  color: rgba(216, 216, 216, 0.897);
+  letter-spacing: 5px; }
+
+.main-proyectos__container h2:nth-child(1) {
+  font-size: 3rem;
+  width: 70%; }
+
+.main-proyectos__container h2:nth-child(2) {
+  font-size: 2.5rem;
+  width: 65%; }
+
+.main-proyectos__container h2:nth-child(3) {
+  font-size: 3.5rem;
+  width: 60%; }
+
+.main-proyectos__container h2:nth-child(4) {
+  font-size: 4rem;
+  width: 70%; }
+
+.main-aboutme {
+  height: 100vh;
+  background: linear-gradient(rgba(138, 87, 81, 0.15), rgba(138, 87, 81, 0.15));
+  padding: 1rem; }
+
+.main-aboutme__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.main-aboutme__title {
+  color: rgba(204, 204, 204, 0.75);
+  margin-left: 4rem; }
+
+.aboutme-container {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.main-aboutme__bio {
+  width: 50%;
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: right;
+  color: rgba(204, 204, 204, 0.726);
+  margin: 2rem; }
+
+.main-aboutme__img {
+  width: 260px; }
+
+.main-aboutme__img img {
+  width: 100%; }
+
+.main-contact {
+  height: 100vh;
+  background: linear-gradient(rgba(40, 64, 72, 0.18), rgba(40, 64, 72, 0.18));
+  padding: 1rem; }
+
+.main-contact__title {
+  text-align: center;
+  color: rgba(204, 204, 204, 0.733); }
+
+.main-contact__full {
+  width: 20%;
+  margin: 0 auto;
+  text-align: center; }
+
+.main-contact__full .separator-line {
+  width: 80%;
+  margin: 0 auto; }
+
+.main-contact__socialnetworks {
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  list-style: none;
+  color: rgba(204, 204, 204, 0.733); }
+
+.main-contact__socialnetworks li {
+  font-size: 2rem;
+  padding: 1rem; }
+
+footer {
+  background: #272727;
+  padding: 2rem; }
+
+.footer-links {
+  margin: 0 auto;
+  width: 50%;
+  list-style: none;
+  display: flex;
+  justify-content: space-between; }
+
+.footer-links li a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: rgba(204, 204, 204, 0.746); }
+
+@media (max-width: 992px) {
+  .nav-bar .nav-bar__container {
+    width: 100%; }
+    .nav-bar .nav-bar__container .nav-bar__menu {
+      justify-content: center; }
+      .nav-bar .nav-bar__container .nav-bar__menu a[href="#aboutme"] {
+        min-width: 120px; }
+
+  .artist-profile {
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 1px 1px 2px black; }
+
+  .main-obras__obra .main-obras__obra-title {
+    font-size: 1.75rem;
+    letter-spacing: 2px; }
+  .main-obras__obra .main-obras__obra-description {
+    font-size: 1rem;
+    font-weight: 300;
+    padding: .5rem; }
+  .main-obras__obra:nth-child(2) {
+    margin-top: 4rem; }
+  .main-obras__obra:nth-child(3) {
+    margin-top: 2rem; }
+
+  .page-center {
+    width: 80%; }
+
+  .section-container {
+    height: 100%;
+    padding: 2rem 0;
+    margin: 0 auto;
+    width: 85%;
+    display: flex;
+    flex-direction: column; }
+
+  .main_obras__container {
+    height: 100%; } }
+@media (max-width: 768px) {
+  .header {
+    height: 80vh; }
+    .header .nav-bar .nav-bar__container {
+      width: 100%; }
+      .header .nav-bar .nav-bar__container .nav-bar__menu a {
+        display: none; }
+
+  .section-container {
+    width: 95%; }
+
+  .page-center {
+    width: 90%; }
+
+  .section-title {
+    text-align: center;
+    margin: 0 auto; }
+
+  .separator-line {
+    display: none;
+    margin: 0 auto;
+    width: 25%; }
+
+  .main-obras {
+    height: auto; }
+    .main-obras .main_obras__container {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: center; }
+      .main-obras .main_obras__container .main-obras__obra {
+        padding: 1rem;
+        margin: 0;
+        width: 100%; }
+        .main-obras .main_obras__container .main-obras__obra .main-obras__obra-title {
+          text-shadow: none; }
+        .main-obras .main_obras__container .main-obras__obra:nth-child(2) {
+          margin: 0; } }
+
+/*# sourceMappingURL=style.css.map */

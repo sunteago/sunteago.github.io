@@ -1,0 +1,42 @@
+
+.main-aboutme {
+    height: 100vh;
+    background: linear-gradient(rgba(138, 87, 81, 0.15), rgba(138, 87, 81, 0.15));
+    padding: 1rem;
+}
+
+.main-aboutme__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-aboutme__title {
+    color: rgba(204, 204, 204, 0.75);
+    margin-left: 4rem;
+}
+
+.aboutme-container {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-aboutme__bio {
+    width: 50%;
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: right;
+    color: rgba(204, 204, 204, 0.726);
+    margin: 2rem;
+}
+
+.main-aboutme__img {
+    width: 260px;
+}
+
+.main-aboutme__img img {
+    width: 100%;
+}

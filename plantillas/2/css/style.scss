@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap');
+@font-face {
+    font-family: "Microsoft Yi Baiti";
+    src: url(../fonts/msyi.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+html,body {
+    width: 100%;
+    background-color: gray;
+    overflow-x: hidden;
+}
+
+
+
+@import "header";
+@import "mobile-nav";
+@import "main";
+@import "obras";
+@import "proyectos";
+@import "aboutme";
+@import "contact";
+@import "footer";
+@import "medias";

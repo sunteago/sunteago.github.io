@@ -1,0 +1,133 @@
+@media (max-width: 992px) {
+    .nav-bar {
+        .nav-bar__container {
+            width: 100%;
+
+            .nav-bar__menu {
+                justify-content: center;
+
+                a {
+                    &[href="#aboutme"] {
+                        min-width: 120px;
+                    }
+                }
+            }
+        }
+    }
+
+    .artist-profile {
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-shadow: 1px 1px 2px black;
+    }
+
+
+    .main-obras__obra {
+        .main-obras__obra-title {
+            font-size: 1.75rem;
+            letter-spacing: 2px;
+        }
+    
+        .main-obras__obra-description {
+            font-size: 1rem;
+            font-weight: 300;
+            padding: .5rem;
+        }
+        &:nth-child(2) {
+            margin-top: 4rem;
+        }
+
+        &:nth-child(3) {
+            margin-top: 2rem;
+        }
+        
+    }
+
+    .page-center {
+        width: 80%;
+    }
+
+    .section-container {
+        height: 100%;
+        padding: 2rem 0;
+        margin: 0 auto;
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main_obras__container {
+        height: 100%;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .header {
+        height: 80vh;
+
+        .nav-bar {
+            .nav-bar__container {
+                width: 100%;
+
+                .nav-bar__menu {
+                    a {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .mobile-nav-bar {
+
+            .mobile-nav-bar__container {
+
+            }
+        }
+
+    }
+
+    .section-container {
+        width: 95%;
+    }
+
+    .page-center {
+        width: 90%;
+    }
+
+    .section-title {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .separator-line {
+        display: none;
+        margin: 0 auto;
+        width: 25%;
+    }
+
+    .main-obras {
+        height: auto;
+
+        .main_obras__container {
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: center;
+
+            .main-obras__obra {
+                padding: 1rem;
+                margin: 0;
+                width: 100%;
+                .main-obras__obra-title {
+                    text-shadow: none;
+                }
+                &:nth-child(2) {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

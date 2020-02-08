@@ -1,0 +1,19 @@
+.mobile-nav-bar {
+    display: none;
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    .toggle-button {
+        height: 40px;
+        width: 40px;
+        background: white;
+    }
+    ul {
+        list-style: none;
+        li {
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}

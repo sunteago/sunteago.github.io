@@ -1,0 +1,41 @@
+.main {
+    width: 100%;
+    margin: 0 auto;
+    background: rgba(39, 39, 39, 0.05);
+    background: url('../img/tom-winckels-z8FFy3uMFGI-unsplash.jpg');
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.section-container {
+    width: 70%;
+    height: 100%;
+    padding: 3rem 0;
+    margin: 0 auto 0 auto;
+}
+
+.page-center {
+    /* display: none; */
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    background: rgba(39, 39, 39, 0.05);
+    transform: translate(-50%, 0);
+    top: 0;
+    left: 50%;
+    z-index: -1;
+}
+.section-title {
+    font-size: 3rem;
+    margin-top: 2rem;
+}
+
+.separator-line {
+    margin-left: 4rem;
+    margin-top: 0.5rem;
+    border: 1px solid rgba(240, 240, 240, 0.6);
+    width: 60%;
+}

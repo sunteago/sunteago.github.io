@@ -1,0 +1,37 @@
+.main-contact {
+    height: 100vh;
+    background: linear-gradient(rgba(40, 64, 72, 0.18), rgba(40, 64, 72, 0.18));
+    padding: 1rem;
+}
+
+.main-contact__title {
+    text-align: center;
+    color: rgba(204, 204, 204, 0.733);
+
+}
+
+.main-contact__full {
+    width: 20%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.main-contact__full .separator-line {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.main-contact__socialnetworks {
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    color: rgba(204, 204, 204, 0.733);
+
+}
+
+.main-contact__socialnetworks li {
+    font-size: 2rem;
+    padding: 1rem;
+}
