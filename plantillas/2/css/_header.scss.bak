@@ -54,7 +54,7 @@
         .nav-bar__menu {
             display: flex;
             list-style: none;
-            justify-content: right;
+            justify-content: end;
             .nav-bar__menu-item {
                 a {
                     text-align: center;

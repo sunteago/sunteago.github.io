@@ -31,4 +31,11 @@ $(document).ready(function() {
       }, 50);
     }
   });
+
+  //toggles class "open"
+  $('.toggle-button').click( function() {
+    $('.mobile-nav-bar').toggleClass('open');
+  });
+
+
 });

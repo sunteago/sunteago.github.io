@@ -68,7 +68,6 @@
 
     .header {
         height: 80vh;
-
         .nav-bar {
             .nav-bar__container {
                 width: 100%;
@@ -80,14 +79,9 @@
                 }
             }
         }
-
-        .mobile-nav-bar {
-
-            .mobile-nav-bar__container {
-
-            }
-        }
-
+        .toggle-button {
+            display: inline-block;
+    }
     }
 
     .section-container {
