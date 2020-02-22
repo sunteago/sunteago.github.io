@@ -1,7 +1,8 @@
 .main-proyectos {
     height: 100vh;
-    background: linear-gradient(rgba(162, 154, 154, 0.15), rgba(162, 154, 154, 0.15));
+    background: rgba(162, 154, 154, 0.15);
     padding: 1rem;
+    font-size: 1rem;
 }
 
 .main-proyectos__title {
@@ -11,16 +12,17 @@
 }
 
 .main-proyectos__title-full {
+    margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: end;
+    align-items: flex-end;
 }
 
 .main-proyectos__container {
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: flex-end;
     // overflow: hidden; // fix para que no se salga de la seccion
 }
 
@@ -33,21 +35,21 @@
 }
 
 .main-proyectos__container h2:nth-child(1) {
-    font-size: 3rem;
+    font-size: 2.3em;
     width: 70%
 }
 
 .main-proyectos__container h2:nth-child(2) {
-    font-size: 2.5rem;
+    font-size: 2em;
     width: 65%
 }
 
 .main-proyectos__container h2:nth-child(3) {
-    font-size: 3.5rem;
+    font-size: 2.8em;
     width: 60%
 }
 
 .main-proyectos__container h2:nth-child(4) {
-    font-size: 4rem;
+    font-size: 3.3em;
     width: 70%
 }

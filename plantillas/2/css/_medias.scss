@@ -20,55 +20,95 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        text-shadow: 1px 1px 2px black;
+
+        .artist-name {
+            text-shadow: none;
+        }
     }
 
+    .main-obras {
+        height: auto;
 
-    .main-obras__obra {
-        .main-obras__obra-title {
-            font-size: 1.75rem;
-            letter-spacing: 2px;
-        }
-    
-        .main-obras__obra-description {
-            font-size: 1rem;
-            font-weight: 300;
-            padding: .5rem;
-        }
-        &:nth-child(2) {
-            margin-top: 4rem;
-        }
+        .main_obras__container {
+            height: 100%;
 
-        &:nth-child(3) {
-            margin-top: 2rem;
+            .main-obras__obra {
+
+                font-size: .8rem;
+
+                .main-obras__obra-title {
+                    letter-spacing: 2px;
+                }
+
+                .main-obras__obra-description {
+                    font-weight: 300;
+                    padding: .5rem;
+                }
+
+                &:nth-child(2) {
+                    margin-top: 4rem;
+                }
+
+                &:nth-child(3) {
+                    margin-top: 2rem;
+                }
+            }
         }
-        
+    }
+
+    .main-proyectos {
+        height: auto;
+        font-size: .7rem;
+    }
+
+    .main-aboutme {
+        height: auto;
+
+        .aboutme-container {
+            font-size: 0.8rem;
+            margin-top: 1rem;
+
+            .main-aboutme__bio {
+                margin: 1rem;
+            }
+        }
+    }
+
+    .main-contact {
+        height: auto;
     }
 
     .page-center {
         width: 80%;
+        background: rgba(39, 39, 39, 0.15);
     }
 
     .section-container {
         height: 100%;
-        padding: 2rem 0;
         margin: 0 auto;
         width: 85%;
         display: flex;
         flex-direction: column;
+        padding: 1rem
+    }
+    .main-contact__socialnetworks {
+        li {
+            margin: .4rem;
+        }
     }
 
-    .main_obras__container {
-        height: 100%;
-    }
+
 
 }
 
 @media (max-width: 768px) {
 
     .header {
-        height: 80vh;
+        height: 60vh;
+
         .nav-bar {
+            box-shadow: none;
+
             .nav-bar__container {
                 width: 100%;
 
@@ -79,9 +119,10 @@
                 }
             }
         }
+
         .toggle-button {
             display: inline-block;
-    }
+        }
     }
 
     .section-container {
@@ -104,8 +145,6 @@
     }
 
     .main-obras {
-        height: auto;
-
         .main_obras__container {
             flex-direction: column;
             flex-wrap: nowrap;
@@ -115,13 +154,79 @@
                 padding: 1rem;
                 margin: 0;
                 width: 100%;
+
                 .main-obras__obra-title {
                     text-shadow: none;
                 }
+
                 &:nth-child(2) {
                     margin: 0;
                 }
             }
+        }
+    }
+
+    .main-proyectos {
+        .main-proyectos__container {
+            align-items: center;
+
+            .main-proyectos__proyecto-title {
+                width: 85%;
+                text-align: center;
+                margin: 1.5rem;
+            }
+        }
+    }
+
+    .main-contact {
+        .main-contact__socialnetworks {
+            li {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .main-aboutme {
+        .aboutme-container {
+            flex-direction: column;
+            width: 80%;
+
+            .main-aboutme__bio {
+                width: 100%;
+                order: 1;
+                text-align: center;
+            }
+
+            .main-aboutme__img {
+
+                box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.3);
+                max-width: 15rem;
+                width: 100%;
+                order: 0;
+            }
+        }
+    }
+
+    footer {
+        height: auto;
+        padding: 1rem;
+        .footer-links {
+            flex-direction: column;
+            align-items: center;
+            margin: 1rem auto;
+            padding-bottom: .5rem;
+            li {
+                margin: .2rem;
+                &:nth-child(1) {
+                    order: 1
+                }
+                &:nth-child(2) {
+                    order: 0
+                }
+            }
+        }
+        .footer-created-by {
+            text-align: center;
         }
     }
 }

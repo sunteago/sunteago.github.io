@@ -14,10 +14,8 @@
 html,body {
     width: 100%;
     background-color: gray;
-    overflow-x: hidden;
+    // overflow-x: hidden;
 }
-
-
 
 @import "header";
 @import "mobile-nav";
@@ -28,3 +26,4 @@ html,body {
 @import "contact";
 @import "footer";
 @import "medias";
+

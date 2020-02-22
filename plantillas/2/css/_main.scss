@@ -1,7 +1,7 @@
 .main {
     width: 100%;
     margin: 0 auto;
-    background: rgba(39, 39, 39, 0.05);
+    background: #2727270d;
     background: url('../img/tom-winckels-z8FFy3uMFGI-unsplash.jpg');
     background-position: 50% 0%;
     background-repeat: no-repeat;
@@ -11,11 +11,14 @@
 }
 
 .section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 70%;
     height: 100%;
+    margin: 0 auto;
     padding: 3rem 0;
-    margin: 0 auto 0 auto;
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 .page-center {
@@ -23,7 +26,7 @@
     width: 80%;
     height: 100%;
     position: absolute;
-    background: rgba(39, 39, 39, 0.05);
+    background: rgba(39, 39, 39, 0.07);
     transform: translate(-50%, 0);
     top: 0;
     left: 50%;

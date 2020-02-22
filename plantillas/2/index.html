@@ -11,7 +11,7 @@
 
 <body>
     <header class="header" id="header">
-        <div class="header-background"></div>
+        <div class="header-background scrollspy" id="top"></div>
         <div class="artist-profile">
             <h1 class="artist-name">Santiago Vallejo</h1>
             <div class="separating-line"></div>
@@ -19,36 +19,34 @@
         </div>
         <nav class="nav-bar">
             <button class="toggle-button">
-             <img src="img/bars-solid.svg" alt="">
+                <img src="img/bars-solid.svg" alt="">
             </button>
             <div class="nav-bar__container">
-                <ul class="nav-bar__menu">
+                <ul id="nav-bar__menu" class="nav-bar__menu">
                     <li class="nav-bar__menu-item"><a href="#top">Inicio</a></li>
-                    <li class="nav-bar__menu-item"><a href="#obras">Obras</a></li>
-                    <li class="nav-bar__menu-item"><a href="#proyectos">Proyectos</a></li>
-                    <li class="nav-bar__menu-item"><a href="#aboutme">Sobre mi</a></li>
-                    <li class="nav-bar__menu-item"><a href="#contact">Contacto</a></li>
+                    <li class="nav-bar__menu-item"><a href="#main-obras">Obras</a></li>
+                    <li class="nav-bar__menu-item"><a href="#main-proyectos">Proyectos</a></li>
+                    <li class="nav-bar__menu-item"><a href="#main-about-me">Sobre mi</a></li>
+                    <li class="nav-bar__menu-item"><a href="#main-contact">Contacto</a></li>
                 </ul>
             </div>
         </nav>
         <nav class="mobile-nav-bar">
             <div class="mobile-nav-bar__container">
                 <ul>
-                    <li class="mobile-bar__menu-item"><a href="#top">Inicio</a></li>
-                    <li class="mobile-bar__menu-item"><a href="#obras">Obras</a></li>
-                    <li class="mobile-bar__menu-item"><a href="#proyectos">Proyectos</a></li>
-                    <li class="mobile-bar__menu-item"><a href="#aboutme">Sobre mi</a></li>
-                    <li class="mobile-bar__menu-item"><a href="#contact">Contacto</a></li>
+                    <li class="mobile-bar__menu-item"><a href="#header">Inicio</a></li>
+                    <li class="mobile-bar__menu-item"><a href="#main-obras">Obras</a></li>
+                    <li class="mobile-bar__menu-item"><a href="#main-proyectos">Proyectos</a></li>
+                    <li class="mobile-bar__menu-item"><a href="#main-about-me">Sobre mi</a></li>
+                    <li class="mobile-bar__menu-item"><a href="#main-contact">Contacto</a></li>
                 </ul>
             </div>
         </nav>
         
     </header>
-        
-    </header>
     <div class="main">
         <div class="page-center"></div>
-        <div class="main-obras" id="main-obras">
+        <div class="main-obras scrollspy" id="main-obras">
             <div class="section-container">
                 <div class="main-obras__title-full">
                     <h1 class="main_obras__title section-title" id="obras">Obras</h1>
@@ -58,17 +56,18 @@
                     <article class="main-obras__obra">
                         <h2 class="main-obras__obra-title">“El confluir de las brisas orienta un viraje a nuevo mundo”
                         </h2>
-                        <h3 class="main-obras__obra-description">   Lorem ipsum dolor sit amet,
+                        <h3 class="main-obras__obra-description"> Lorem ipsum dolor sit amet,
                             consectetur adipiscing elit. Praesent
                             fermentum aliquet pharetra. Felli non,
                             vulputate. </h3>
                     </article>
                     <article class="main-obras__obra">
-                        <h2 class="main-obras__obra-title"> “D i s  t a n  c i a s”</h2>
+                        <h2 class="main-obras__obra-title"> “D i s t a n c i a s”</h2>
                         <h3 class="main-obras__obra-description">Lorem
                             ipsum dolor sit amet consectetur adipisicing elit.
-                            Natus, delectus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, eveniet!</h3>
-                         </article>
+                            Natus, delectus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique,
+                            eveniet!</h3>
+                    </article>
                     <article class="main-obras__obra">
                         <h2 class="main-obras__obra-title">“ente”</h2>
                         <h3 class="main-obras__obra-description">Lorem ipsum dolor sit,
@@ -78,7 +77,7 @@
                 </div>
             </div>
         </div>
-        <div class="main-proyectos" id="main-proyectos">
+        <div class="main-proyectos scrollspy" id="main-proyectos">
             <div class="section-container">
                 <div class="main-proyectos__title-full">
                     <h1 class="main-proyectos__title section-title" id="proyectos">Proyectos</h1>
@@ -92,7 +91,7 @@
                 </div>
             </div>
         </div>
-        <div class="main-aboutme" id="main-about-me">
+        <div class="main-aboutme scrollspy" id="main-about-me">
             <div class="section-container">
                 <div class="main-aboutme__container">
                     <div class="main-obras__title-full">
@@ -101,17 +100,14 @@
                     </div>
                 </div>
                 <div class="aboutme-container">
-                    <h3 class="main-aboutme__bio">Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Maxime esse eum illo omnis labore saepe sunt
-                        magnam aliquam quae excepturi.</h3>
+                    <h3 class="main-aboutme__bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas iusto, amet aut, repellat non minus nostrum molestiae quisquam at sed voluptate sint alias atque odit, dolore quo aspernatur? Fugit ducimus nesciunt, minus sapiente ipsum optio. Praesentium inventore quis sint! Dignissimos suscipit maxime qui, nulla impedit molestias pariatur in incidunt officia?</h3>
                     <div class="main-aboutme__img">
                         <img src="./img/profile.png" alt="profile picture">
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="main-contact" id="main-contact">
+        <div class="main-contact scrollspy" id="main-contact">
             <div class="section-container">
                 <div class="main-contact__full">
                     <h1 class="main-contact__title section-title" id="contact">Contacto</h1>
@@ -127,13 +123,14 @@
     </div>
     <footer>
         <ul class="footer-links">
-            <li><a href="#">Inicio</a></li>
             <li><a href="#">Links externos</a></li>
+            <li><a href="#">Inicio</a></li>
             <li><a href="#">Otros trabajos</a></li>
         </ul>
+        <p class="footer-created-by">Created & designed by Santiago Vallejo - 2020</p>
     </footer>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/scrollspy.min.js"></script>
     <script src="./js/script.js"></script>
     </div>
 </body>

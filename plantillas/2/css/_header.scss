@@ -1,5 +1,5 @@
 .header {
-
+    position: relative;
     .header-background {
         background-image: url('../img/piano.jpg');
         background-repeat: no-repeat;
@@ -54,7 +54,7 @@
         .nav-bar__menu {
             display: flex;
             list-style: none;
-            justify-content: right;
+            justify-content: flex-end;
             .nav-bar__menu-item {
                 a {
                     text-align: center;
@@ -66,7 +66,8 @@
                     text-decoration: none;
                     transition: color .5s ease-out, background .5s ease-out;
                     background: inherit;
-                    &:hover {
+                    &:hover,
+                    &.active {
                         color: rgb(241, 241, 241);
                         background: rgba(241, 241, 241, .4);
                     }
