@@ -1,0 +1,622 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap");
+@font-face {
+  font-family: "Microsoft Yi Baiti";
+  src: url(../fonts/msyi.ttf);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  background-color: gray;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.header {
+  position: relative;
+}
+.header .header-background {
+  background-image: linear-gradient(rgba(84, 84, 84, 0.45), rgba(84, 84, 84, 0.45)), url("../img/img(1).png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 10% 35%;
+  height: 100vh;
+  width: 100%;
+  filter: grayscale(65%) brightness(80%);
+}
+
+.artist-profile {
+  position: absolute;
+  top: 40%;
+  left: 55%;
+  color: rgba(204, 204, 204, 0.863);
+  letter-spacing: 0.15rem;
+  font-size: 1rem;
+}
+
+.artist-name {
+  color: inherit;
+  font-size: 3.5em;
+  margin-bottom: 1rem;
+  font-weight: 300;
+  text-shadow: 2px 2px 5px #272727;
+}
+
+.separating-line {
+  border: 1px solid rgba(240, 240, 240, 0.6);
+  width: 100%;
+}
+
+.artist-profession {
+  color: inherit;
+  font-size: 2em;
+  font-weight: 300;
+  padding-top: 1rem;
+}
+
+.nav-bar {
+  background: rgba(0, 0, 0, 0.329);
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 50;
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+}
+.nav-bar .nav-bar__container {
+  width: 70%;
+  margin: 0 auto;
+}
+.nav-bar .nav-bar__container .nav-bar__menu {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+}
+.nav-bar .nav-bar__container .nav-bar__menu .nav-bar__menu-item a {
+  text-align: center;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
+  color: #AEAEAE;
+  padding: 1rem;
+  display: inline-block;
+  text-decoration: none;
+  transition: color 0.5s ease-out, background 0.5s ease-out;
+  background: inherit;
+}
+.nav-bar .nav-bar__container .nav-bar__menu .nav-bar__menu-item a:hover, .nav-bar .nav-bar__container .nav-bar__menu .nav-bar__menu-item a.active {
+  color: #f1f1f1;
+  background: rgba(241, 241, 241, 0.4);
+}
+
+.toggle-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  height: 3rem;
+  width: 3rem;
+  margin: 0.5rem 1rem;
+  display: none;
+}
+.toggle-button img {
+  padding: 2px;
+  width: 100%;
+  height: 100%;
+}
+
+.mobile-nav-bar {
+  background: rgba(0, 0, 0, 0.329);
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  z-index: 100;
+  display: none;
+  position: fixed;
+  width: 70vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  padding: 4rem 2rem 2rem 2rem;
+}
+.mobile-nav-bar .mobile-nav-bar__container {
+  width: 100%;
+}
+.mobile-nav-bar .mobile-nav-bar__container ul {
+  list-style: none;
+  width: 100%;
+  text-align: center;
+}
+.mobile-nav-bar .mobile-nav-bar__container ul li a {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem 0 1rem 0;
+  text-decoration: none;
+  color: black;
+  background: #a7a4a4a9;
+  border-radius: 10px;
+}
+.mobile-nav-bar .mobile-nav-bar__container ul li a:active {
+  color: #aeaeae;
+  background: #464646;
+}
+
+.open {
+  display: block;
+  position: fixed;
+}
+
+.main {
+  width: 100%;
+  margin: 0 auto;
+  background: #2727270d;
+  background: url("../img/tom-winckels-z8FFy3uMFGI-unsplash.jpg");
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.section-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+.page-center {
+  /* display: none; */
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  background: rgba(39, 39, 39, 0.07);
+  transform: translate(-50%, 0);
+  top: 0;
+  left: 50%;
+  z-index: -1;
+}
+
+.section-title {
+  font-size: 3rem;
+  margin-top: 1rem;
+}
+
+.separator-line {
+  margin-left: 4rem;
+  margin-top: 0.5rem;
+  border: 1px solid rgba(240, 240, 240, 0.6);
+  width: 60%;
+}
+
+.main-obras {
+  height: 100vh;
+  padding: 1rem;
+  background: rgba(40, 64, 72, 0.25);
+}
+.main-obras .main-obras__title-full {
+  margin-bottom: 1rem;
+}
+
+.main_obras__title {
+  color: rgba(204, 204, 204, 0.75);
+  margin-left: 4rem;
+}
+
+.main_obras__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.main_obras__container .main-obras__obra {
+  font-size: 0.9rem;
+  width: 47%;
+  padding: 1rem;
+}
+.main_obras__container .main-obras__obra:nth-child(2) {
+  margin-top: 4rem;
+  min-width: 20rem;
+}
+.main_obras__container .main-obras__obra:nth-child(3) {
+  width: 100%;
+}
+
+.main-obras__obra-title {
+  font-family: "Microsoft Yi Baiti", sans-serif;
+  font-size: 2em;
+  color: #272727;
+  letter-spacing: 4px;
+  text-shadow: 0px 0px 4px #5E5050;
+  text-align: center;
+}
+
+.main-obras__obra-description {
+  text-align: center;
+  font-size: 1.25em;
+  color: rgba(204, 204, 204, 0.75);
+  line-height: 2.5rem;
+  font-weight: 200;
+  padding: 0.5rem;
+}
+
+.main-proyectos {
+  height: 100vh;
+  background: rgba(162, 154, 154, 0.15);
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.main-proyectos__title {
+  text-align: right;
+  color: rgba(223, 223, 223, 0.609);
+  margin-right: 4rem;
+}
+
+.main-proyectos__title-full {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.main-proyectos__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.main-proyectos__container h2 {
+  text-align: left;
+  font-family: "Microsoft Yi Baiti", sans-serif;
+  margin: 2rem;
+  color: rgba(216, 216, 216, 0.897);
+  letter-spacing: 5px;
+}
+
+.main-proyectos__container h2:nth-child(1) {
+  font-size: 2.3em;
+  width: 70%;
+}
+
+.main-proyectos__container h2:nth-child(2) {
+  font-size: 2em;
+  width: 65%;
+}
+
+.main-proyectos__container h2:nth-child(3) {
+  font-size: 2.8em;
+  width: 60%;
+}
+
+.main-proyectos__container h2:nth-child(4) {
+  font-size: 3.3em;
+  width: 70%;
+}
+
+.main-aboutme {
+  height: 100vh;
+  background: rgba(138, 87, 81, 0.15);
+  padding: 1rem;
+}
+
+.main-aboutme__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main-aboutme__container .main-obras__title-full {
+  margin-bottom: 1rem;
+}
+
+.main-aboutme__title {
+  color: rgba(204, 204, 204, 0.75);
+  margin-left: 4rem;
+}
+
+.aboutme-container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aboutme-container .main-aboutme__bio {
+  width: 50%;
+  font-size: 1.37em;
+  font-weight: 300;
+  text-align: right;
+  color: rgba(204, 204, 204, 0.726);
+  margin: 2rem;
+  line-height: 1.75rem;
+}
+
+.main-aboutme__img {
+  width: 260px;
+}
+
+.main-aboutme__img img {
+  width: 100%;
+}
+
+.main-contact {
+  height: 85vh;
+  background: rgba(79, 132, 149, 0.18);
+  padding: 1rem;
+}
+
+.main-contact__title {
+  text-align: center;
+  color: rgba(204, 204, 204, 0.733);
+}
+
+.main-contact__full {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main-contact__full .separator-line {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.main-contact__socialnetworks {
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  list-style: none;
+  color: rgba(204, 204, 204, 0.733);
+}
+.main-contact__socialnetworks li {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+footer {
+  background: #202020;
+  height: 15vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+footer .footer-links {
+  margin: 0 auto;
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  font-size: 1.125rem;
+  background: #302e2e;
+  align-items: center;
+}
+footer .footer-links li a {
+  display: inline-block;
+  margin: 0.5rem 2rem;
+  text-decoration: none;
+  color: rgba(204, 204, 204, 0.746);
+  transition: color 0.1s ease-in;
+}
+footer .footer-links li a:hover {
+  color: rgba(255, 255, 255, 0.746);
+}
+footer .footer-created-by {
+  margin: 0.1rem 1rem;
+  display: inline-block;
+  width: 100%;
+  text-align: right;
+  color: rgba(255, 255, 255, 0.3);
+  align-self: center;
+}
+
+@media (max-width: 992px) {
+  .nav-bar .nav-bar__container {
+    width: 100%;
+  }
+  .nav-bar .nav-bar__container .nav-bar__menu {
+    justify-content: center;
+  }
+  .nav-bar .nav-bar__container .nav-bar__menu a[href="#aboutme"] {
+    min-width: 120px;
+  }
+
+  .artist-profile {
+    text-align: right;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    font-size: 0.7rem;
+  }
+  .artist-profile .artist-name {
+    text-shadow: none;
+  }
+
+  .main-obras {
+    height: auto;
+  }
+  .main-obras .main_obras__container {
+    height: 100%;
+  }
+  .main-obras .main_obras__container .main-obras__obra {
+    font-size: 0.75rem;
+  }
+  .main-obras .main_obras__container .main-obras__obra .main-obras__obra-title {
+    letter-spacing: 2px;
+  }
+  .main-obras .main_obras__container .main-obras__obra .main-obras__obra-description {
+    font-weight: 300;
+    padding: 0.5rem;
+  }
+  .main-obras .main_obras__container .main-obras__obra:nth-child(2) {
+    margin-top: 4rem;
+  }
+  .main-obras .main_obras__container .main-obras__obra:nth-child(3) {
+    margin-top: 2rem;
+  }
+
+  .main-proyectos {
+    height: auto;
+    font-size: 0.7rem;
+  }
+
+  .main-aboutme {
+    height: auto;
+  }
+  .main-aboutme .aboutme-container {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+  }
+  .main-aboutme .aboutme-container .main-aboutme__bio {
+    margin: 1rem;
+  }
+
+  .main-contact {
+    height: auto;
+  }
+
+  .page-center {
+    width: 80%;
+  }
+
+  .section-container {
+    height: 100%;
+    margin: 0 auto;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .header {
+    height: 60vh;
+  }
+  .header .nav-bar {
+    box-shadow: none;
+  }
+  .header .nav-bar .nav-bar__container {
+    width: 100%;
+  }
+  .header .nav-bar .nav-bar__container .nav-bar__menu a {
+    display: none;
+  }
+  .header .toggle-button {
+    display: inline-block;
+  }
+
+  .section-container {
+    width: 100%;
+    padding: 0;
+  }
+
+  .page-center {
+    width: 96%;
+  }
+
+  .section-title {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .separator-line {
+    display: none;
+    margin: 0 auto;
+    width: 25%;
+  }
+
+  .main-obras .main_obras__container {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  .main-obras .main_obras__container .main-obras__obra {
+    padding: 1rem;
+    margin: 0;
+    width: 100%;
+  }
+  .main-obras .main_obras__container .main-obras__obra .main-obras__obra-title {
+    text-shadow: none;
+  }
+  .main-obras .main_obras__container .main-obras__obra:nth-child(2) {
+    margin: 0;
+  }
+
+  .main-proyectos .main-proyectos__container {
+    align-items: center;
+  }
+  .main-proyectos .main-proyectos__container .main-proyectos__proyecto-title {
+    width: 85%;
+    text-align: center;
+    margin: 1.5rem;
+  }
+
+  .main-contact .main-contact__socialnetworks li {
+    font-size: 1rem;
+  }
+
+  .main-aboutme .aboutme-container {
+    flex-direction: column;
+    width: 80%;
+  }
+  .main-aboutme .aboutme-container .main-aboutme__bio {
+    width: 100%;
+    order: 1;
+    text-align: center;
+  }
+  .main-aboutme .aboutme-container .main-aboutme__img {
+    box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.3);
+    max-width: 15rem;
+    width: 100%;
+    order: 0;
+  }
+
+  footer {
+    height: auto;
+    padding: 1rem;
+  }
+  footer .footer-links {
+    background: none;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem auto;
+    padding-bottom: 0.5rem;
+  }
+  footer .footer-links li {
+    text-align: center;
+    width: 90%;
+    margin: 0.2rem;
+  }
+  footer .footer-links li:nth-child(1) {
+    order: 1;
+  }
+  footer .footer-links li:nth-child(2) {
+    order: 0;
+  }
+  footer .footer-links li a {
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0.5rem;
+    background: #302e2e;
+    border-radius: 10px;
+  }
+  footer .footer-links li a:focus {
+    background: #746f6f;
+  }
+  footer .footer-created-by {
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
