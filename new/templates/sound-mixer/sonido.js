@@ -10,7 +10,7 @@ const container = document.getElementById('container');
 for (let i = 0; i < NUM_SOUNDS; i++) {
   //howl sound
   arraySounds[i] = new Howl({
-    src: [`./sounds/${i}.mp3`],
+    src: [`./sounds/${i}.ogg`, `./sounds/${i}.mp3`],
     loop: true,
     volume: generateRandomVolumeNumber()
   });

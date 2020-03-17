@@ -60,7 +60,7 @@ button {
   padding: .5rem 1rem;
   letter-spacing: 2px;
 }
-button:hover, button:focus {
+button:hover {
   background-color: #544a7d77;
   outline: none;
 }
