@@ -270,6 +270,10 @@ body {
   justify-content: flex-end;
   align-items: flex-end;
 }
+.main-proyectos__title-full .separator-line {
+  margin-left: 0;
+  margin-right: 4rem;
+}
 
 .main-proyectos__container {
   display: flex;
