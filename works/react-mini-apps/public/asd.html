@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id='sada'>asdas</button>
+    <button id='sede'>asdas</button>
+    <script>
+        const audio = document.createElement('audio');
+        audio.setAttribute('src', 'sounds/clock-sound.mp3');
+        document.getElementById('sada').addEventListener('click', () => audio.play())
+        document.getElementById('sede').addEventListener('click', () => audio.pause())
+    </script>
+</body>
+
+</html>
