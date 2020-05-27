@@ -26,7 +26,8 @@
     width: 80%;
     height: 100%;
     position: absolute;
-    background: rgba(39, 39, 39, 0.07);
+    background: rgb(39,39,39);
+    background: linear-gradient(180deg, rgba(39,39,39,0.07) 0%, rgba(39,39,39,0.25) 100%);
     transform: translate(-50%, 0);
     top: 0;
     left: 50%;

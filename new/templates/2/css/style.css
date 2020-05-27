@@ -22,25 +22,41 @@ body {
   user-select: none;
 }
 
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .header {
   position: relative;
 }
 .header .header-background {
-  background-image: linear-gradient(rgba(84, 84, 84, 0.45), rgba(84, 84, 84, 0.45)), url("../img/img(1).png");
+  background-image: linear-gradient(to right, rgba(50, 50, 50, 0.1), rgba(10, 10, 10, 0.739)), url("../img/perfil2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 10% 35%;
+  background-position: 10% 50%;
   height: 100vh;
   width: 100%;
-  filter: grayscale(65%) brightness(80%);
+  animation: filtro 4s ease-in 1s forwards;
 }
 
+@keyframes filtro {
+  0% {
+    filter: grayscale(0%);
+  }
+  100% {
+    filter: grayscale(100%);
+  }
+}
 .artist-profile {
   position: absolute;
   top: 40%;
-  left: 55%;
-  color: rgba(204, 204, 204, 0.863);
-  letter-spacing: 0.15rem;
+  left: 45%;
+  color: rgba(230, 230, 230, 0.863);
+  letter-spacing: 0.5rem;
   font-size: 1rem;
 }
 
@@ -48,8 +64,7 @@ body {
   color: inherit;
   font-size: 3.5em;
   margin-bottom: 1rem;
-  font-weight: 300;
-  text-shadow: 2px 2px 5px #272727;
+  font-weight: 100;
 }
 
 .separating-line {
@@ -71,6 +86,7 @@ body {
   top: 0;
   z-index: 50;
   box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+  animation: fadein 2s ease-in;
 }
 .nav-bar .nav-bar__container {
   width: 70%;
@@ -100,10 +116,12 @@ body {
 .toggle-button {
   background: none;
   border: none;
+  position: fixed;
+  right: 2.8rem;
+  top: 1.5rem;
   cursor: pointer;
   height: 3rem;
   width: 3rem;
-  margin: 0.5rem 1rem;
   display: none;
 }
 .toggle-button img {
@@ -112,46 +130,67 @@ body {
   height: 100%;
 }
 
-.mobile-nav-bar {
-  background: rgba(0, 0, 0, 0.329);
+.mobile-navbar {
+  background: rgba(30, 30, 30, 0.85);
   display: flex;
   align-items: start;
   justify-content: center;
   z-index: 100;
-  display: none;
   position: fixed;
-  width: 70vw;
+  display: none;
+  width: 100vw;
   height: 100vh;
   top: 0;
   left: 0;
   padding: 4rem 2rem 2rem 2rem;
+  transition: opacity 0.3s ease-in;
+  opacity: 0;
 }
-.mobile-nav-bar .mobile-nav-bar__container {
+.mobile-navbar .mobile-navbar__close {
+  color: #fff;
+  font-size: 3rem;
+  position: fixed;
+  top: 20px;
+  right: 40px;
+  cursor: pointer;
+}
+.mobile-navbar .mobile-navbar__container {
   width: 100%;
+  height: 100%;
 }
-.mobile-nav-bar .mobile-nav-bar__container ul {
+.mobile-navbar .mobile-navbar__container ul {
+  font-size: 2rem;
+  height: 100%;
+  width: 100%;
   list-style: none;
-  width: 100%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.mobile-nav-bar .mobile-nav-bar__container ul li a {
+.mobile-navbar .mobile-navbar__container ul li a {
   display: block;
   width: 100%;
   padding: 1rem;
   margin: 1rem 0 1rem 0;
   text-decoration: none;
-  color: black;
-  background: #a7a4a4a9;
-  border-radius: 10px;
+  color: #fff;
 }
-.mobile-nav-bar .mobile-nav-bar__container ul li a:active {
-  color: #aeaeae;
-  background: #464646;
+.mobile-navbar .mobile-navbar__container ul li a:active {
+  color: #777676;
 }
 
-.open {
+.visible {
   display: block;
-  position: fixed;
+}
+
+.invisible {
+  display: none !important;
+}
+
+.fadein {
+  opacity: 1;
 }
 
 .main {
@@ -181,7 +220,8 @@ body {
   width: 80%;
   height: 100%;
   position: absolute;
-  background: rgba(39, 39, 39, 0.07);
+  background: #272727;
+  background: linear-gradient(180deg, rgba(39, 39, 39, 0.07) 0%, rgba(39, 39, 39, 0.25) 100%);
   transform: translate(-50%, 0);
   top: 0;
   left: 50%;
@@ -202,7 +242,7 @@ body {
 
 .main-obras {
   height: 100vh;
-  padding: 1rem;
+  padding: 3rem 1rem;
   background: rgba(40, 64, 72, 0.25);
 }
 .main-obras .main-obras__title-full {
@@ -250,38 +290,38 @@ body {
   padding: 0.5rem;
 }
 
-.main-proyectos {
+.main-projects {
   height: 100vh;
   background: rgba(162, 154, 154, 0.15);
-  padding: 1rem;
+  padding: 3rem 1rem;
   font-size: 1rem;
 }
 
-.main-proyectos__title {
+.main-projects__title {
   text-align: right;
   color: rgba(223, 223, 223, 0.609);
   margin-right: 4rem;
 }
 
-.main-proyectos__title-full {
+.main-projects__title-full {
   margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
 }
-.main-proyectos__title-full .separator-line {
+.main-projects__title-full .separator-line {
   margin-left: 0;
   margin-right: 4rem;
 }
 
-.main-proyectos__container {
+.main-projects__container {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
-.main-proyectos__container h2 {
+.main-projects__container h2 {
   text-align: left;
   font-family: "Microsoft Yi Baiti", sans-serif;
   margin: 2rem;
@@ -289,22 +329,22 @@ body {
   letter-spacing: 5px;
 }
 
-.main-proyectos__container h2:nth-child(1) {
+.main-projects__container h2:nth-child(1) {
   font-size: 2.3em;
   width: 70%;
 }
 
-.main-proyectos__container h2:nth-child(2) {
+.main-projects__container h2:nth-child(2) {
   font-size: 2em;
   width: 65%;
 }
 
-.main-proyectos__container h2:nth-child(3) {
+.main-projects__container h2:nth-child(3) {
   font-size: 2.8em;
   width: 60%;
 }
 
-.main-proyectos__container h2:nth-child(4) {
+.main-projects__container h2:nth-child(4) {
   font-size: 3.3em;
   width: 70%;
 }
@@ -312,7 +352,7 @@ body {
 .main-aboutme {
   height: 100vh;
   background: rgba(138, 87, 81, 0.15);
-  padding: 1rem;
+  padding: 3rem 1rem;
 }
 
 .main-aboutme__container {
@@ -357,7 +397,7 @@ body {
 .main-contact {
   height: 85vh;
   background: rgba(79, 132, 149, 0.18);
-  padding: 1rem;
+  padding: 3rem 1rem;
 }
 
 .main-contact__title {
@@ -438,7 +478,7 @@ footer .footer-created-by {
   .artist-profile {
     text-align: right;
     top: 50%;
-    left: 75%;
+    left: 65%;
     transform: translate(-50%, -50%);
     font-size: 0.7rem;
   }
@@ -469,7 +509,7 @@ footer .footer-created-by {
     margin-top: 2rem;
   }
 
-  .main-proyectos {
+  .main-projects {
     height: auto;
     font-size: 0.7rem;
   }
@@ -503,9 +543,6 @@ footer .footer-created-by {
   }
 }
 @media (max-width: 768px) {
-  .header {
-    height: 60vh;
-  }
   .header .nav-bar {
     box-shadow: none;
   }
@@ -516,7 +553,7 @@ footer .footer-created-by {
     display: none;
   }
   .header .toggle-button {
-    display: inline-block;
+    display: block;
   }
 
   .section-container {
@@ -556,17 +593,17 @@ footer .footer-created-by {
     margin: 0;
   }
 
-  .main-proyectos .main-proyectos__container {
+  .main-projects .main-projects__container {
     align-items: center;
   }
-  .main-proyectos .main-proyectos__container .main-proyectos__proyecto-title {
+  .main-projects .main-projects__container .main-projects__project-title {
     width: 85%;
     text-align: center;
     margin: 1.5rem;
   }
 
   .main-contact .main-contact__socialnetworks li {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 
   .main-aboutme .aboutme-container {
@@ -591,7 +628,6 @@ footer .footer-created-by {
   }
   footer .footer-links {
     background: none;
-    flex-direction: column;
     align-items: center;
     margin: 1rem auto;
     padding-bottom: 0.5rem;
@@ -611,12 +647,12 @@ footer .footer-created-by {
     width: 100%;
     display: block;
     margin: 0;
+    font-size: 1.25rem;
     padding: 0.5rem;
-    background: #302e2e;
     border-radius: 10px;
   }
   footer .footer-links li a:focus {
-    background: #746f6f;
+    color: #746f6f;
   }
   footer .footer-created-by {
     text-align: center;

@@ -1,11 +1,21 @@
 const arraySounds = [];
 const soundsPlaying = [];
-
+const soundsNames = ['Lofi Rain','Seagulls','Seagulls2','Machine','Machine2','Water','Zen','Unknown','Lofi','Rain','Traffic','Forest'];
+soundsNames.length;
+let numOfSoundsPlaying = 0;
 const INITIAL_VOLUME =  0.8 ;
-const NUM_SOUNDS = 9;
+const NUM_SOUNDS = 12;
 
 const container = document.getElementById('container');
+const soundsPlayingDOM = document.getElementById('sounds-playing');
 
+const updateNumOfSoundsPlaying = () => {
+  if (!numOfSoundsPlaying) {
+    soundsPlayingDOM.innerText = 'No sounds playing'
+    return;
+  }
+  soundsPlayingDOM.innerText = numOfSoundsPlaying;
+}
 
 for (let i = 0; i < NUM_SOUNDS; i++) {
   //howl sound
@@ -14,6 +24,11 @@ for (let i = 0; i < NUM_SOUNDS; i++) {
     loop: true,
     volume: generateRandomVolumeNumber()
   });
+  
+  //create title 
+  const soundTitle = document.createElement('h4');
+  soundTitle.innerText = soundsNames[i];
+  
   //create array of buttons
   const soundButton = document.createElement("button");
   soundButton.innerHTML = `[ Paused ]`;
@@ -21,14 +36,14 @@ for (let i = 0; i < NUM_SOUNDS; i++) {
   //create sliders
   const slider = document.createElement("input");
   passSlideAttributes(slider, i);
-
+  
   const slideContainer = document.createElement('div')
   slideContainer.classList.add('slide-container');
   slideContainer.append(slider);
 
   const soundContainer = document.createElement('div');
   soundContainer.classList.add('sound-container');
-  soundContainer.append(soundButton,slideContainer);
+  soundContainer.append(soundTitle, soundButton,slideContainer);
   container.append(soundContainer);
 
   //add play stop
@@ -52,11 +67,14 @@ function clickButtonHandler(idx, sound, thisBtn) {
     soundsPlaying[idx].id = id;
     sound.fade(0, soundVol, 1000, soundsPlaying[idx].id);
     soundsPlaying[idx].status = "Playing";
+    numOfSoundsPlaying++;
   } else  {
     sound.fade(soundVol, 0, 1000, soundsPlaying[idx].id);
     setTimeout(() => sound.pause(soundsPlaying[idx].id), 1000);
     soundsPlaying[idx].status = "Paused";
+    numOfSoundsPlaying--;
   }
+  updateNumOfSoundsPlaying();
   thisBtn.classList.toggle('playing');
   thisBtn.innerHTML = `[ ${soundsPlaying[idx].status} ] `;
 }

@@ -18,7 +18,7 @@
     .artist-profile {
         text-align: right;
         top: 50%;
-        left: 75%;
+        left: 65%;
         transform: translate(-50%, -50%);
         font-size: .7rem;
 
@@ -57,7 +57,7 @@
         }
     }
 
-    .main-proyectos {
+    .main-projects {
         height: auto;
         font-size: .7rem;
     }
@@ -97,7 +97,7 @@
 @media (max-width: 768px) {
 
     .header {
-        height: 60vh;
+        // height: 60vh;
 
         .nav-bar {
             box-shadow: none;
@@ -114,7 +114,7 @@
         }
 
         .toggle-button {
-            display: inline-block;
+            display: block;
         }
     }
 
@@ -160,11 +160,11 @@
         }
     }
 
-    .main-proyectos {
-        .main-proyectos__container {
+    .main-projects {
+        .main-projects__container {
             align-items: center;
 
-            .main-proyectos__proyecto-title {
+            .main-projects__project-title {
                 width: 85%;
                 text-align: center;
                 margin: 1.5rem;
@@ -175,7 +175,7 @@
     .main-contact {
         .main-contact__socialnetworks {
             li {
-                font-size: 1rem;
+                font-size: 1.25rem;
             }
         }
     }
@@ -207,7 +207,7 @@
 
         .footer-links {
             background: none;
-            flex-direction: column;
+            // flex-direction: column;
             align-items: center;
             margin: 1rem auto;
             padding-bottom: .5rem;
@@ -228,11 +228,11 @@
                     width: 100%;
                     display: block;
                     margin: 0;
+                    font-size: 1.25rem;
                     padding: .5rem;
-                    background: #302e2e;
                     border-radius: 10px;
                     &:focus {
-                        background: #746f6f;
+                        color: #746f6f;
                     }
                 }
             }

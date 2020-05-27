@@ -5,24 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sound Mixer</title>
-    <link rel="stylesheet" href="sounds.css">
+    <link rel="stylesheet" href="sounds-grid-refactor.css">
     <script src="./sounds/howler.min.js"></script>
+    <script src="sonido.js" defer></script>
+
 </head>
 
 <body>
     <h1>Sound Mixer</h1>
     <div id="container">
-
+        <div class="sound-container master-vol">
+            <h2>Master</h2>
+            <div class="slide-container">
+                <input value="0.85" type="range" max="1" min="0" step="0.05" name="single-volume" class="slider">
+            </div>
+            <h4>Sounds playing:</h4>
+            <span id="sounds-playing">No sounds playing</span>
+            <button>Randomize</button>
+            <button>Stop All</button>
+        </div>
+        <!-- <div class="sound-container master-vol"><button>[ Paused ]</button>
+            <div class="slide-container main">
+                    <div class="center wheel1">
+                        <div class="rotate-wheel">
+                            <div class="inner-wheel-2"></div>
+                        </div>
+                    </div>
+            </div>
+        </div> -->
     </div>
     <!-- <div class="slidecontainer">
             <label for="single-volume"></label>
             <input type="range" name="single-volume" class="slider" min="0" max="1" step="0.03">
         </div> -->
-    <footer>
 
+    </div>
+    <footer>
         <p>Created & Designed by Santiago Vallejo, using the HowlerJS library</p>
     </footer>
-    <script src="sonido.js"></script>
 </body>
 
 </html>

@@ -24,11 +24,12 @@ body {
     user-select: none;
 }
 
+@import "animations";
 @import "header";
 @import "mobile-nav";
 @import "main";
 @import "obras";
-@import "proyectos";
+@import "projects";
 @import "aboutme";
 @import "contact";
 @import "footer";

@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #544a7d; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #544a7d,
+    /*#613042 a #e9a757 */ #ffd452
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #544a7d,
+    #ffd452
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-image: linear-gradient(to top, #613042, #733646, #863c47, #974347, #a74c44, #b35644, #bd6144, #c76d43, #d07b47, #d98a4c, #e19851, #e9a757); 
+}
+h1 {
+  margin-top: 3rem;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
+#container {
+  margin: 0 auto;
+  width: 75%;
+  display: grid;
+  grid-auto-rows: max-content;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-items: center;
+  justify-content: center;
+  grid-gap: 1rem;
+  align-items: center;
+  align-content: center;
+}
+.sound-container {
+  width: max-content;
+  margin: 0.5rem;
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  /* border: 2px solid rgba(255, 255, 255, 0.2); */
+}
+
+.sound-container h4 {
+  color: #ccc;
+  margin-bottom: 0;
+}
+
+button {
+  background-color: #ffd4521f;
+  transition: all 0.7s ease-in;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.85);
+  border-radius: 5px;
+  border: none;
+  /* border: 1px solid rgba(255, 255, 255, 0.2); */
+  box-shadow: 2px 2px 4px 2px #544a7d46;
+  cursor: pointer;
+  margin: 1.5rem 1rem;
+  padding: 0.5rem 1rem;
+  letter-spacing: 2px;
+}
+button:hover {
+  background-color: #544a7d77;
+  outline: none;
+}
+
+.playing {
+  background-color: #544a7d77;
+  animation: playing-titling 3s infinite ease-in-out;
+}
+/* SLIDER */
+.slide-container {
+  width: 95%;
+}
+ .sound-container.master-vol {
+  background: rgba(255, 255, 255, 0.05);
+  grid-column: -2 / -1;
+  grid-row: 1 / span 2;
+  align-self: stretch;
+  /*
+  flex-direction: row;
+  justify-content: center;*/
+}
+.sound-container h2 {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.sound-container h3 {
+  display: inline-block;
+}
+#sounds-playing {
+  color: #ccc;
+  font-weight: bold;
+  margin-top: 1rem;
+  font-weight: 100;
+}
+
+/*
+.slide-container.main {
+  width: unset;
+}
+.wheel1.center {
+  background: #ffd4521f;;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 20px solid #ffd4521f;
+  position: relative;
+}
+
+.inner-wheel-2 {
+  border-radius: 53% 47% 50% 50% / 50% 0% 50% 48%;
+  width: 100%;
+  height: 100%;
+  background: #544a7d81;
+  border: none;
+  animation: animateAfter 5s linear infinite;
+}
+
+.rotate-wheel {
+  transform: translate(-50%, -50%) rotate(180deg);
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+} */
+
+
+.slider {
+  -webkit-appearance: none;
+  width: 80%;
+  height: 15px;
+  border-radius: 5px;
+  background: #ffd4521f;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.4s;
+  transition: opacity 0.4s;
+  border: 1px solid #544a7d20;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: rgba(255, 212, 82, 0.4);
+  cursor: pointer;
+  border: 1px solid #544a7d41;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: rgba(255, 212, 82, 0.4);
+  cursor: pointer;
+  border: 1px solid #544a7d77;
+}
+footer {
+  margin-top: auto;
+}
+p {
+  margin-top: 3rem;
+  color: white;
+  text-align: right;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+
+@keyframes playing-titling {
+  0% {
+    background-color: #544a7d77;
+  }
+  50% {
+    background-color: #544a7d20;
+  }
+  100% {
+    background-color: #544a7d77;
+  }
+}
+
+@media (max-width: 1024) {
+  #container {
+    width: 85%;
+  }
+  p {
+    position: relative;
+  }
+}
+
+@media (max-width: 576px) {
+  #container {
+    width: 100%;
+    grid-template-columns: auto;
+    justify-content: stretch;
+  }
+  .sound-container {
+    width: 80%;
+  }
+  button {
+    width: 100%;
+    margin: 0.5rem 1rem 1rem 1rem;
+  }
+  p {
+    text-align: center;
+  }
+}
+

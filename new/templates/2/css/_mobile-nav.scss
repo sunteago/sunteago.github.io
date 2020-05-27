@@ -1,10 +1,12 @@
 .toggle-button {
     background: none;
     border: none;
+    position: fixed;
+    right: 2.8rem;
+    top: 1.5rem;
     cursor: pointer;
     height: 3rem;
     width: 3rem;
-    margin: .5rem 1rem;
     img {
         // border: 2px solid #7a7a7a;
         // border-radius: 3px;
@@ -16,26 +18,44 @@
     display: none;
 }
 
-.mobile-nav-bar {
-    background: rgba(0, 0, 0, 0.329);
+.mobile-navbar {
+    background: rgba(30, 30, 30, 0.85);
     display: flex;
     align-items: start;
     justify-content: center;
     z-index: 100;
-    display: none; // ESTE HAY QUE DESCHEQUEAR
-    position: fixed; 
-    width: 70vw;
+    position: fixed;
+    display: none;
+    width: 100vw;
     height: 100vh;
     top: 0;
     left: 0;
     padding: 4rem 2rem 2rem 2rem;
+    transition: opacity .3s ease-in;
+    opacity: 0;
 
-    .mobile-nav-bar__container {
+    .mobile-navbar__close {
+        color: #fff;
+        font-size: 3rem;
+        position: fixed;
+        top: 20px;
+        right: 40px;
+        cursor: pointer;
+    }
+
+    .mobile-navbar__container {
         width: 100%;
+        height: 100%;
         ul {
-            list-style: none;
+            font-size: 2rem;
+            height: 100%;
             width: 100%;
+            list-style: none;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
             li {
                 a {
@@ -44,13 +64,10 @@
                     padding: 1rem;
                     margin: 1rem 0 1rem 0;
                     text-decoration: none;
-                    color: black;
-                    background: #a7a4a4a9;
-                    border-radius: 10px;
+                    color: #fff;
                     &:active {
-                    color: #aeaeae;
-                    background: rgb(70, 70, 70);
-    
+                    color: #777676;
+
                     }
                 }
             }
@@ -58,7 +75,14 @@
     }
 }
 
-.open {
+.visible {
     display: block;
-    position: fixed;
+}
+
+.invisible {
+    display: none !important;
+}
+
+.fadein {
+    opacity: 1;
 }

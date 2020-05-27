@@ -1,32 +1,39 @@
 .header {
     position: relative;
     .header-background {
-        background-image: linear-gradient(rgba(84, 84, 84, 0.45),rgba(84, 84, 84, 0.45)), url('../img/img(1).png');
+        background-image: linear-gradient(to right, rgba(50, 50, 50, 0.1),rgba(10, 10, 10, 0.739)), url('../img/perfil2.jpg');
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: 10% 35%;
+        background-position: 10% 50%;
         height: 100vh;
         width: 100%;
-        filter: grayscale(65%) brightness(80%);
-
+        animation: filtro 4s ease-in 1s forwards;
+    }
+}
+@keyframes filtro {
+    0% {
+        filter: grayscale(0%);
+    }
+    100% {
+        filter: grayscale(100%);
     }
 }
 
 .artist-profile {
     position: absolute;
     top: 40%;
-    left: 55%;
-    color: rgba(204, 204, 204, 0.863);
-    letter-spacing: .15rem;
+    left: 45%;
+    color: rgba(230, 230, 230, 0.863);
+    letter-spacing: .50rem;
     font-size: 1rem;
+    // transform: rotateZ(90deg);
 }
 
 .artist-name {
     color: inherit;
     font-size: 3.5em;
     margin-bottom: 1rem;
-    font-weight: 300;
-    text-shadow: 2px 2px 5px rgb(39, 39, 39);
+    font-weight: 100;
 
 }
 
@@ -43,6 +50,7 @@
 }
 
 
+
 .nav-bar {
     background: rgba(0, 0, 0, 0.329);
     width: 100vw;
@@ -50,6 +58,7 @@
     top: 0;
     z-index: 50;
     box-shadow: 2px 2px 5px 2px rgba(0,0,0,.2);
+    animation: fadein 2s ease-in;
     .nav-bar__container {
         width: 70%;
         margin: 0 auto;
