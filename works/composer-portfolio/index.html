@@ -10,43 +10,46 @@
 </head>
 
 <body>
+    <nav class="nav-bar">
+
+        <div class="nav-bar__container">
+            <ul id="nav-bar__menu" class="nav-bar__menu">
+                <li class="nav-bar__menu-item"><a href="#top">Inicio</a></li>
+                <li class="nav-bar__menu-item"><a href="#main-obras">Obras</a></li>
+                <li class="nav-bar__menu-item"><a href="#main-projects">Proyectos</a></li>
+                <li class="nav-bar__menu-item"><a href="#main-about-me">Sobre mi</a></li>
+                <li class="nav-bar__menu-item"><a href="#main-contact">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav class="mobile-navbar">
+        <div class="mobile-navbar__container">
+            <div class="mobile-navbar__close">&times;</div>
+            <ul class="mobile_navbar__menu">
+                <li class="mobile-navbar__menu-item"><a href="#header">Inicio</a></li>
+                <li class="mobile-navbar__menu-item"><a href="#main-obras">Obras</a></li>
+                <li class="mobile-navbar__menu-item"><a href="#main-projects">Proyectos</a></li>
+                <li class="mobile-navbar__menu-item"><a href="#main-about-me">Sobre mi</a></li>
+                <li class="mobile-navbar__menu-item"><a href="#main-contact">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="toggle-button-container">
+        <button class="toggle-button">
+            <img src="img/bars-solid.svg" alt="">
+        </button>
+    </div>
 
     <header class="header" id="header">
         <div class="header-background scrollspy" id="top"></div>
         <div class="artist-profile">
             <h1 class="artist-name">Santiago Vallejo</h1>
-            <div class="separating-line"></div>
-            <h2 class="artist-profession">Electroacoustic Composer</h2>
+            <!-- <div class="separating-line"></div> -->
+            <h2 class="artist-profession">electroacoustic Composer</h2>
         </div>
-        <button class="toggle-button">
-            <img src="img/bars-solid.svg" alt="">
-        </button>
-        <nav class="nav-bar">
-
-            <div class="nav-bar__container">
-                <ul id="nav-bar__menu" class="nav-bar__menu">
-                    <li class="nav-bar__menu-item"><a href="#top">Inicio</a></li>
-                    <li class="nav-bar__menu-item"><a href="#main-obras">Obras</a></li>
-                    <li class="nav-bar__menu-item"><a href="#main-projects">Proyectos</a></li>
-                    <li class="nav-bar__menu-item"><a href="#main-about-me">Sobre mi</a></li>
-                    <li class="nav-bar__menu-item"><a href="#main-contact">Contacto</a></li>
-                </ul>
-            </div>
-        </nav>
-        <nav class="mobile-navbar">
-            <div class="mobile-navbar__container">
-                <div class="mobile-navbar__close">&times;</div>
-                <ul class="mobile_navbar__menu">
-                    <li class="mobile-navbar__menu-item"><a href="#header">Inicio</a></li>
-                    <li class="mobile-navbar__menu-item"><a href="#main-obras">Obras</a></li>
-                    <li class="mobile-navbar__menu-item"><a href="#main-projects">Proyectos</a></li>
-                    <li class="mobile-navbar__menu-item"><a href="#main-about-me">Sobre mi</a></li>
-                    <li class="mobile-navbar__menu-item"><a href="#main-contact">Contacto</a></li>
-                </ul>
-            </div>
-        </nav>
-
     </header>
+
     <div class="main">
         <div class="page-center"></div>
         <div class="main-obras scrollspy" id="main-obras">

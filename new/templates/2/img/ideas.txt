@@ -1,9 +1,0 @@
-usar parralax para el header
-
-geva alon https://es.wix.com/website-template/view/html/1707?siteId=ccf9d9ce-68b8-4913-a495-981b7989d10b&metaSiteId=66eea037-8331-444a-a599-320c195c4b43&originUrl=https%3A%2F%2Fes.wix.com%2Fwebsite%2Ftemplates%2Fhtml%2Fmusic
-
-otra idea: imagen grande de fondo, y fondos transparentes tipo
-https://es.wix.com/website-template/view/html/1052?siteId=f57536ba-bc4a-4273-9945-2e58ba670037&metaSiteId=a5705d38-a210-414b-b0cc-ddfb3ceea47a&originUrl=https%3A%2F%2Fes.wix.com%2Fwebsite%2Ftemplates%2Fhtml%2Fmusic
-
-
-header con videos cortitos de 2 o 3 segundos, con fades

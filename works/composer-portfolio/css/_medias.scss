@@ -16,11 +16,6 @@
     }
 
     .artist-profile {
-        text-align: center;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
         .artist-name {
             text-shadow: none;
         }
@@ -34,7 +29,7 @@
 
             .main-obras__obra {
 
-                font-size: .8rem;
+                font-size: .75rem;
 
                 .main-obras__obra-title {
                     letter-spacing: 2px;
@@ -80,7 +75,6 @@
 
     .page-center {
         width: 80%;
-        background: rgba(39, 39, 39, 0.15);
     }
 
     .section-container {
@@ -89,48 +83,46 @@
         width: 85%;
         display: flex;
         flex-direction: column;
-        padding: 1rem
+        padding: 1rem;
     }
-    .main-contact__socialnetworks {
-        li {
-            margin: .4rem;
-        }
-    }
-
-
 
 }
 
 @media (max-width: 768px) {
+    .nav-bar {
+        box-shadow: none;
+        display: none;
 
-    .header {
-        height: 60vh;
+        .nav-bar__container {
+            width: 100%;
 
-        .nav-bar {
-            box-shadow: none;
 
-            .nav-bar__container {
-                width: 100%;
-
-                .nav-bar__menu {
-                    a {
-                        display: none;
-                    }
-                }
-            }
-        }
-
-        .toggle-button {
-            display: inline-block;
         }
     }
 
+    .toggle-button-container {
+        display: block;
+    }
+
+    .header {
+        .artist-profile {
+            top: 50%;
+            right: 1rem;
+            transform: translate(0, -50%);
+            font-size: .6rem;
+            width: 50%;
+        }
+    }
+
+
+
     .section-container {
-        width: 95%;
+        width: 100%;
+        padding: 0;
     }
 
     .page-center {
-        width: 90%;
+        width: 96%;
     }
 
     .section-title {
@@ -181,7 +173,7 @@
     .main-contact {
         .main-contact__socialnetworks {
             li {
-                font-size: 1rem;
+                font-size: 1.25rem;
             }
         }
     }
@@ -210,21 +202,42 @@
     footer {
         height: auto;
         padding: 1rem;
+
         .footer-links {
-            flex-direction: column;
+            background: none;
+            // flex-direction: column;
             align-items: center;
             margin: 1rem auto;
             padding-bottom: .5rem;
+
             li {
+                text-align: center;
+                width: 90%;
                 margin: .2rem;
+
                 &:nth-child(1) {
                     order: 1
                 }
+
                 &:nth-child(2) {
                     order: 0
                 }
+
+                a {
+                    width: 100%;
+                    display: block;
+                    margin: 0;
+                    font-size: 1.25rem;
+                    padding: .5rem;
+                    border-radius: 10px;
+
+                    &:focus {
+                        color: #746f6f;
+                    }
+                }
             }
         }
+
         .footer-created-by {
             text-align: center;
         }

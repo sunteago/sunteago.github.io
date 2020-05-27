@@ -1,0 +1,54 @@
+.header {
+    position: relative;
+    .header-background {
+        background-image: url('../img/perfil2.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 10% 50%;
+        height: 100vh;
+        width: 100%;
+        filter: grayscale(100%);
+        animation: filtro 4s ease-in 1s forwards;
+    }
+}
+
+
+.artist-profile {
+    text-align: right;
+    position: absolute;
+    top: 40%;
+    right: 10%;
+    color: rgba(230, 230, 230, 0.863);
+    letter-spacing: .50rem;
+    font-size: 1rem;
+    width: 60%;
+}
+
+.artist-name {
+    color: inherit;
+    font-size: 3.5em;
+    margin-bottom: 1rem;
+    font-weight: 100;
+
+}
+
+// .separating-line {
+//     text-align: right;
+//     border: 1px solid rgba(240, 240, 240, 0.6);
+//     background:  rgba(240, 240, 240, 0.6);
+//     height: 1px;
+//     margin-left: auto;
+//     width: 75%;
+// }
+
+.artist-profession {
+    border-top: 2px solid rgba(240,240,240,.6);
+    display: inline-block;
+    padding-top: 1rem;
+    color: inherit;
+    font-size: 1.25em;
+    font-weight: 300;
+}
+
+
+

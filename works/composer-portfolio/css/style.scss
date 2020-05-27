@@ -22,11 +22,12 @@ body {
     -ms-user-select: none;
     -o-user-select: none;
     user-select: none;
+    overflow-x: hidden;
 }
 
 @import "animations";
+@import "nav";
 @import "header";
-@import "mobile-nav";
 @import "main";
 @import "obras";
 @import "projects";

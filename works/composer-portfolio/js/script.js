@@ -11,12 +11,13 @@ const menuOptions = {
   sectionClass: '.scrollspy',
   offset: 100,
 }
+let currPos = {};
 
 //scrollspy
 scrollSpy('#nav-bar__menu', menuOptions);
 
 const mobileNav = document.querySelector('.mobile-navbar');
-const toggleBtn = document.querySelector('.toggle-button');
+const toggleBtn = document.querySelector('.toggle-button-container');
 const closeBtn = document.querySelector('.mobile-navbar__close');
 
 function scrollToItem(e, i, isMobile) {
@@ -32,6 +33,7 @@ function closeMobileNavbar() {
   mobileNav.classList.remove('fadein');
   setTimeout(() => mobileNav.classList.remove('visible'), 500);
   toggleBtn.classList.remove('invisible');
+  window.removeEventListener('scroll', preventScroll);
 }
 
 function showMobileNavbar() {
@@ -40,6 +42,20 @@ function showMobileNavbar() {
     mobileNav.classList.add('fadein')
     toggleBtn.classList.add('invisible');
   }, 25);
+  //get current position of scroll
+  currPos = getScrollPos();
+  window.addEventListener('scroll',preventScroll);
+}
+
+function preventScroll() {
+  const {currX, currY} = currPos;
+  window.scrollTo(currX, currY);
+}
+
+function getScrollPos() {
+  const currX = window.pageXOffset || document.documentElement.scrollLeft;
+  const currY = window.pageYOffset || document.documentElement.scrollTop; 
+  return {currX, currY};
 }
 
 let counter = 0;
