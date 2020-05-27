@@ -1,0 +1,118 @@
+:root {
+  --primary: rgb(225, 184, 36);
+  --secondary: rgb(30, 27, 21);
+  --terciary: rgba(255, 255, 255, 0.534);
+  --secondary-muted: rgba(83, 74, 56, 0.739);
+  /* --light: var(--primary);
+    --dark: var(--secondary); */
+}
+
+.dark {
+  --primary: rgb(0, 0, 0);
+  --secondary: rgb(255, 255, 255);
+  --terciary: rgba(100, 100, 100, 0.534);
+  --secondaryMuted: rgba(240, 240, 240, 0.739);
+}
+.classic {
+  --primary: rgb(225, 184, 36);
+  --secondary: rgb(30, 27, 21);
+  --terciary: rgba(255, 255, 255, 0.534);
+  --secondaryMuted: rgba(83, 74, 56, 0.739);
+}
+.sky {
+  --primary: rgb(33, 95, 92);
+  --secondary: rgb(208, 222, 190);
+  --terciary: rgba(63, 108, 112, 0.27);
+  --secondaryMuted: rgba(83, 74, 56, 0.739);
+}
+
+*,
+html,
+body {
+  font-family: "Raleway", sans-serif !important;
+}
+body {
+  background-image: linear-gradient(
+    to bottom,
+    /* #e1b824,  */ var(--primary),
+    /* #ac8d25, #796423, #4a3d1d,  */ /* #1e1b15); */ var(--secondary)
+  );
+  background-repeat: no-repeat;
+  font-family: "Raleway", sans-serif;
+  min-height: 100vh;
+  position: relative;
+}
+
+.brand,
+.brand:hover,
+.brand:focus {
+  text-decoration: none;
+  color: var(--secondary);
+  /* transform: translate(-4%, 0); */
+}
+
+.brand-container {
+  vertical-align: top;
+  /* cursor: pointer;
+    user-select: none; */
+}
+
+.brand-logo {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.brand-logo img {
+  width: 100%;
+}
+.brand-name {
+  font-weight: 900;
+}
+
+.left-panel,
+.right-panel {
+  background: var(--secondary);
+  color: var(--primary);
+}
+
+.left-panel__menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.left-panel__menu li {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.left-panel__login {
+  text-align: center;
+}
+.left-panel__login h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.left-panel__login-button {
+  color: var(--primary);
+}
+
+.right-panel__title {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.right-panel__menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.right-panel__menu li {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
