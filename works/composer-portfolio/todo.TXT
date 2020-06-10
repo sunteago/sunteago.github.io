@@ -1,0 +1,5 @@
+- add recalculations when resizing page (even without using scroll wheel)
+- take more time for filter effect at start
+-edit footer in mobile version
+-change all classes and text to english
+-add "see more" in Works and Projects
