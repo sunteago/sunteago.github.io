@@ -1,4 +1,4 @@
-#Acoron Social Network
+# Acoron Social Network
 
 It is a simple social network, somehow inspired in Twitter
 
