@@ -4,7 +4,7 @@ Welcome!
 These are some of my current projects (I do have more in my profile, go check them!)
 
 Links:
-https://acoron.netlify.app/#/
+
 Composer portfolio:
 https://sunteago.github.io/composer-portfolio/
 
