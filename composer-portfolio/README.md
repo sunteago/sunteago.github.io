@@ -1,5 +1,5 @@
 # composer portfolio
 
-Simple one-page composer portfolio
+Simple one-page composer portfolio template
 
-https://sunteago.github.io/composer-portfolio/
+[Visit here](https://sunteago.github.io/composer-portfolio/)
