@@ -12,4 +12,4 @@ Acoron is a simple social network inspired in Twitter.
 
 Frontend is [here](../Frontend)
 
-Try [Acoron}(https://acoron.netlify.app/)
+Try [Acoron](https://acoron.netlify.app/)
